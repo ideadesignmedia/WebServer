@@ -3,6 +3,7 @@ const nodeArgs = process.argv.slice(2)
 global.DEV = nodeArgs.find(u => u.split('=')[0] === 'dev' && u.split('=')[1] === 'true')
 console.log(`Starting in ${DEV ? 'Development' : 'Production'} Mode`)
 const http = require('http')
+const express = require('express')
 const path = require('path')
 const loggingtool = require('morgan');
 const sanitize = require('sanitize')
